@@ -9,13 +9,15 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
         rel="stylesheet" />
+
     <style>
          :root {
             --orange: #d68100;
+            --darkgray: #181818;
+            --logofont: "Lato";
+            --gray: #7a7a7a;
         }
         
         body {
@@ -34,50 +36,57 @@
             background-position: center center;
             background-attachment: fixed;
         }
+        /* .title {
+        font-family: var(--logofont);
+        font-size: 4vw;
+        font-weight: 500;
         
-        .title {
-            font-family: "EB Garamond";
-            font-size: 4vw;
-            font-weight: 500;
-            /* font-style: italic; */
-            color: var(--orange);
-            align-self: center;
-            grid-column: 1/5;
-            grid-row: 1;
-        }
-        
-        .hours {
-            font-family: "EB Garamond";
-            font-size: 2.2vw;
-            font-weight: 500;
-            align-self: center;
-            grid-column: 1/5;
-            grid-row: 2;
-            color: var(--orange);
-        }
-        
-        .location {
-            font-family: "EB Garamond";
+        color: var(--orange);
+        align-self: center;
+        grid-column: 1/5;
+        grid-row: 1;
+      } */
+        /* .hours {
+            font-family: var(--logofont);
             font-size: 2vw;
-            font-weight: 500;
-            align-self: center;
-            grid-column: 1/5;
-            grid-row: 3;
-            color: var(--orange);
-        }
-        
-        .contact {
-            font-family: "EB Garamond";
-            font-size: 2vw;
-            font-weight: 500;
+            font-weight: 400;
             align-self: center;
             grid-column: 1/5;
             grid-row: 4;
-            color: var(--orange);
+            color: var(--gray);
+        }
+        
+        .location {
+            font-family: var(--logofont);
+            font-size: 2vw;
+            font-weight: 400;
+            align-self: center;
+            grid-column: 1/5;
+            grid-row: 3;
+            color: var(--gray);
+        }
+        
+        .contact {
+            font-family: var(--logofont);
+            font-size: 2vw;
+            font-weight: 400;
+            align-self: center;
+            grid-column: 1/5;
+            grid-row: 2;
+            color: var(--gray);
+        }
+         */
+        
+        .infoitem {
+            font-family: var(--logofont);
+            font-size: 2vw;
+            font-weight: 400;
+            color: rgba(214, 129, 0, 0.7);
+            margin-bottom: 10px;
         }
         
         .charcoalglass {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             height: 100%;
             width: 100%;
             display: grid;
@@ -86,29 +95,22 @@
         }
         
         .landingpagepanel {
-            grid-column: 4/6;
-            grid-row: 2/5;
+            grid-column: 3/6;
+            grid-row: 4/6;
             display: grid;
-            grid-template-columns: repeat(4, 25%);
-            grid-template-rows: 40% repeat(3, 20%);
+            justify-items: left;
         }
         
-        .inforgraphics {
+        .infographics {
             display: grid;
             grid-template-columns: 100%;
             justify-items: center;
-            width: 100vw;
-            background-color: #181818;
+            width: 100%;
+            background-color: var(--darkgray);
             color: white;
             border-color: var(--orange);
             border-style: solid;
             border-width: 3px 0 0 0;
-        }
-        
-        .thirdpage {
-            width: 100vw;
-            height: 100vh;
-            background-color: var(--orange);
         }
         
         .fourthpage {
@@ -139,26 +141,27 @@
             }
             .title {
                 font-size: 10vw;
+                /* font-size: clamp(10px, 10vw, 40px); */
                 font-weight: 500;
                 text-align: center;
                 align-self: end;
             }
             .hours {
-                font-family: "EB Garamond";
+                font-family: var(--logofont);
                 font-size: 5vw;
                 font-weight: 500;
                 text-align: center;
                 color: var(--orange);
             }
             .location {
-                font-family: "EB Garamond";
+                font-family: var(--logofont);
                 font-size: 5vw;
                 font-weight: 500;
                 text-align: center;
                 color: var(--orange);
             }
             .contact {
-                font-family: "EB Garamond";
+                font-family: var(--logofont);
                 font-size: 6vw;
                 font-weight: 500;
                 text-align: center;
@@ -166,9 +169,29 @@
                 align-self: end;
                 margin-bottom: 20px;
             }
-            .inforgraphics {
+            .infographics {
                 display: none;
             }
+        }
+        
+        .logopanel {
+            grid-column: 1 / 2;
+            grid-row: 1/3;
+            display: grid;
+            align-items: end;
+            justify-items: start;
+        }
+        
+        .newtitleimage {
+            grid-column: 3 / 6;
+            grid-row: 2/3;
+            align-self: end;
+        }
+        
+        .logo {
+            width: clamp(50px, 70%, 150px);
+            margin-left: 40px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -176,19 +199,136 @@
 <body>
     <div class="landingpage">
         <div class="charcoalglass">
+            <div class="logopanel">
+                <img src="img/BrewPubLogoOutlinesOrange.png" class="logo" />
+            </div>
+            <div class="newtitleimage">
+                <img src="img/BrewPubLogo_Horizontal_OutlineOrange.png" width="95%" />
+            </div>
             <div class="landingpagepanel">
-                <div class="title">Black Moon Brewing</div>
-                <div class="hours">10:00 AM ~ 10:00 PM (Everyday)</div>
-                <div class="location">1234 Back Alley Boulevard</div>
-                <div class="contact">321.654.1880</div>
+                <div>
+                    <div class="infoitem">10:00 AM ~ 10:00 PM (Everyday)</div>
+                    <div class="infoitem">1234 Back Alley Boulevard</div>
+                    <div class="infoitem">321.654.1880</div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="inforgraphics">
-        <img src="img/infographics.png" height="340" />
+    <div class="infographics" style="max-width: 100%">
+        <img src="img/infographics.png" width="100%" />
     </div>
 
-    <div class="thirdpage"></div>
+    <style>
+        .moreinfo {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40% 60%;
+            align-items: center;
+            justify-items: center;
+            background-color: var(--darkgray);
+            border-style: solid;
+            border-color: var(--darkgray);
+            border-radius: 5px;
+            width: 500px;
+            height: 200px;
+            color: white;
+            font-size: 10px;
+        }
+        
+        .moreinfo2 {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100%;
+            background-color: var(--orange);
+        }
+        
+        .happenings {
+            width: 100%;
+            background-color: var(--orange);
+        }
+        
+        .events {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .event {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 100px;
+            width: 300px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: var(--darkgray);
+            border-radius: 5px;
+        }
+        
+        .calendardate {
+            font-size: 30px;
+            font-weight: 500;
+            background-color: var(--darkgray);
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            text-transform: uppercase;
+        }
+        
+        .aboutevent {
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .eventtitle {
+            font-family: var(--logofont);
+            font-size: 60px;
+            text-align: center;
+            color: var(--darkgray);
+            padding-top: 35px;
+        }
+    </style>
+    <div class="happenings">
+        <div class="eventtitle">EVENTS</div>
+        <div class="events">
+            <div class="event">
+                <div class="calendardate">
+                    <div>OCT 22</div>
+                </div>
+                <div class="aboutevent">Grand Opening!</div>
+            </div>
+
+            <div class="event">
+                <div class="calendardate">
+                    <div>OCT 31</div>
+                </div>
+                <div class="aboutevent">Halloween 10% off all beverages!</div>
+            </div>
+
+            <div class="event">
+                <div class="calendardate">
+                    <div>nov 26</div>
+                </div>
+                <div class="aboutevent">Thanksgiving 10% off all food!</div>
+            </div>
+        </div>
+        <!-- 
+        <div class="moreinfo">
+            <div>TAPROOM RUN</div>
+            <div class="moreinfo2">
+                <div style="justify-self: center; align-self: center">1</div>
+                <div style="justify-self: center; align-self: center">2</div>
+            </div>
+        </div> -->
+    </div>
+    <div></div>
     <div class="fourthpage"></div>
     -->
     <!-- <script>
