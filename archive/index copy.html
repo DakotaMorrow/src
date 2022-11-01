@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Moon Brewing</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
+        rel="stylesheet" />
+
+    <style>
+         :root {
+            --orange: #d68100;
+            --darkgray: #181818;
+            --logofont: "Lato";
+            --gray: #7a7a7a;
+        }
+        
+        body {
+            font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .landingpage_desktop {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("img/desktop_landing.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        
+        .infoitem {
+            font-family: var(--logofont);
+            font-size: 2vw;
+            font-weight: 400;
+            color: rgba(214, 129, 0, 0.7);
+            margin-bottom: 10px;
+        }
+        
+        .charcoalglass {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            grid-template-rows: repeat(5, 20%);
+        }
+        
+        .landingpagepanel {
+            grid-column: 3/6;
+            grid-row: 4/6;
+            display: grid;
+            justify-items: left;
+        }
+        
+        .infographics {
+            display: grid;
+            grid-template-columns: 100%;
+            justify-items: center;
+            width: 100%;
+            background-color: var(--darkgray);
+            color: white;
+            border-color: var(--orange);
+            border-style: solid;
+            border-width: 3px 0 0 0;
+        }
+        
+        .fourthpage {
+            width: 100vw;
+            height: 100vh;
+            background-color: whitesmoke;
+        }
+        /* mobile */
+        
+        .hidden {
+            display: none;
+        }
+        
+        .landingpage_mobile {
+            display: none;
+        }
+        
+        @media (max-width: 500px) {
+            .landingpage_mobile {
+                display: block;
+                background-image: url("img/mobile_landing.png");
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            .charcoalglass {
+                grid-template-columns: 1fr;
+                grid-template-rows: 40% 20% 20%;
+            }
+            .infographics {
+                display: none;
+            }
+            .landingpage_desktop {
+                display: none;
+            }
+            .logopanel_mobile {
+                height: 100%;
+                width: 100%;
+                justify-self: center;
+            }
+        }
+        
+        .logopanel_desktop {
+            grid-column: 1 / 2;
+            grid-row: 1/3;
+            display: grid;
+            align-items: end;
+            justify-items: start;
+        }
+        
+        .newtitleimage {
+            grid-column: 3 / 6;
+            grid-row: 2/3;
+            align-self: end;
+        }
+        
+        .logo {
+            width: clamp(50px, 70%, 150px);
+            margin-left: 40px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="landingpage_mobile">
+        <div class="charcoalglass">
+            <div class="logopanel_mobile">
+                <div style="
+              display: grid;
+              align-items: center;
+              justify-items: center;
+              padding-top: 35px;
+            ">
+                    <img src="img/BrewPubLogoOutlinesOrange.png" width="40%" alt="logo" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="landingpage_desktop">
+        <div class="charcoalglass">
+            <div class="logopanel_desktop">
+                <img src="img/BrewPubLogoOutlinesOrange.png" class="logo" />
+            </div>
+
+            <div class="newtitleimage">
+                <img src="img/BrewPubLogo_Horizontal_OutlineOrange.png" width="95%" />
+            </div>
+            <div class="landingpagepanel">
+                <div>
+                    <div class="infoitem">10:00 AM ~ 10:00 PM (Everyday)</div>
+                    <div class="infoitem">1234 Back Alley Boulevard</div>
+                    <div class="infoitem">321.654.1880</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="infographics" style="max-width: 100%">
+        <img src="img/infographics.png" width="100%" />
+    </div> -->
+
+    <style>
+        .happenings {
+            width: 100%;
+            background-color: var(--orange);
+        }
+        
+        .events {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .event {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 100px;
+            width: 300px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: var(--darkgray);
+            border-radius: 5px;
+        }
+        
+        .calendardate {
+            font-size: 30px;
+            font-weight: 500;
+            background-color: var(--darkgray);
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            text-transform: uppercase;
+        }
+        
+        .aboutevent {
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .eventtitle {
+            font-family: var(--logofont);
+            font-size: 60px;
+            text-align: center;
+            color: var(--darkgray);
+            padding-top: 35px;
+        }
+    </style>
+    <!-- <div class="happenings">
+        <div class="eventtitle">EVENTS</div>
+        <div class="events">
+            <div class="event">
+                <div class="calendardate">
+                    <div>OCT 22</div>
+                </div>
+                <div class="aboutevent">Grand Opening!</div>
+            </div>
+
+            <div class="event">
+                <div class="calendardate">
+                    <div>OCT 31</div>
+                </div>
+                <div class="aboutevent">Halloween 10% off all beverages!</div>
+            </div>
+
+            <div class="event">
+                <div class="calendardate">
+                    <div>nov 26</div>
+                </div>
+                <div class="aboutevent">Thanksgiving 10% off all food!</div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="fourthpage"></div> -->
+
+    <!-- <script>
+        let scrolling = false;
+        let opacity = 1;
+        var brewpub = document.getElementById("brewpub");
+
+        $(window).scroll(function() {
+            scrolling = true;
+        });
+
+        $(document).ready(function() {
+            console.log(
+                "Height: " + window.innerHeight + " Width: " + window.innerWidth
+            );
+        });
+
+        setInterval(() => {
+            if (scrolling) {
+                if (window.scrollY <= 250) {
+                    opacity = (250 - window.scrollY) / 250;
+                } else {
+                    opacity = 0;
+                }
+
+                scrolling = false;
+                if (window.scrollY < 100) {
+                    brewpub.style.opacity = `${opacity}`;
+                } else {
+                    brewpub.style.opacity = `${opacity}`;
+                }
+            }
+        }, 250);
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+.landingpage_desktop {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/desktop_landing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.menu_desktop {
+    display: flex;
+    position: absolute;
+    grid-column: 1/6;
+    grid-row: 1;
+    /* background-color: #505050; */
+    margin-top: 20px;
+    width: 100%;
+    color: white;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 50px;
+}
+
+.menuitem_desktop {
+    font-size: 25px;
+    color: var(--orange);
+}
+
+.infoitem {
+    font-family: var(--logofont);
+    font-size: 2vw;
+    font-weight: 400;
+    color: rgba(214, 129, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.charcoalglass {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.landingpagepanel {
+    grid-column: 3/6;
+    grid-row: 4/6;
+    display: grid;
+    justify-items: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.landingpage_mobile {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .landingpage_mobile {
+        display: block;
+        background-image: url("/img/mobile_landing.png");
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    .charcoalglass {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+    .infographics {
+        display: none;
+    }
+    .landingpage_desktop {
+        display: none;
+    }
+    .logopanel_mobile {
+        height: 100%;
+        width: 100%;
+        justify-self: center;
+    }
+    .logo_mobile {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        padding-top: 50px;
+    }
+    .infoitem_mobile {
+        font-family: var(--logofont);
+        color: var(--orange);
+        font-size: 6vw;
+        text-align: center;
+    }
+}
+
+.logopanel_desktop {
+    grid-column: 1 / 2;
+    grid-row: 1/3;
+    display: grid;
+    align-items: end;
+    justify-items: start;
+}
+
+.newtitleimage {
+    grid-column: 3 / 6;
+    grid-row: 2/3;
+    align-self: end;
+}
+
+.logo {
+    width: clamp(50px, 70%, 150px);
+    margin-left: 40px;
+    object-fit: cover;
+}
