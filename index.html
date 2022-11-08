@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
         rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7cbc2f9a60.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" type="text/css" href="css/landingpage.css" />
 
@@ -20,15 +21,24 @@
 <body>
     <!-- ------------------------------------------------------------------ -->
 
+    <!-- <div id="menu_mobile" class="menu_mobile menuInvisible_mobile">
+        <div id="xMenu" class="xMenu" onclick="menuXClick()">
+            <i class="fa-solid fa-x"></i>
+        </div>
+    </div> -->
+
     <div class="landingpage_mobile">
         <div class="charcoalglass">
+            <!-- <div id="hamburgerMenu" class="hamburgerMenu menu_mobile" onclick="menuHamburgerClick()">
+                <i class="fa-solid fa-bars"></i>
+            </div> -->
             <div class="logopanel_mobile">
                 <div class="logo_mobile">
                     <img src="img/BrewPubLogoOutlinesOrange.png" width="40%" alt="logo" />
                 </div>
             </div>
 
-            <div style="align-self: end; padding-bottom: 50px">
+            <div style="align-self: end; padding-bottom: 50px" class="info_mobile">
                 <div class="infoitem_mobile">10:00 AM ~ 10:00 PM (Everyday)</div>
                 <div class="infoitem_mobile">1234 Back Alley Boulevard</div>
                 <div class="infoitem_mobile">321.654.1880</div>
@@ -46,7 +56,7 @@
                 <div style="width: 50px"></div>
             </div>
             <div class="logopanel_desktop">
-                <img src="img/BrewPubLogoOutlinesOrange.png" class="logo" />
+                <img src="img/BrewPubLogoOutlinesOrange.png" class="logo_desktop" />
             </div>
 
             <div class="newtitleimage">
@@ -102,6 +112,23 @@
     <div></div>
     <div class="fourthpage"></div>
 
+    <script>
+        function menuHamburgerClick() {
+            menuElement = document.getElementById("menu_mobile");
+            hamburgerElement = document.getElementById("hamburgerMenu");
+            menuElement.classList.remove("menuInvisible_mobile");
+            menuElement.classList.add("menuVisible_mobile");
+            hamburgerElement.style.color = "transparent";
+        }
+
+        function menuXClick() {
+            menuElement = document.getElementById("menu_mobile");
+            hamburgerElement = document.getElementById("hamburgerMenu");
+            menuElement.classList.add("menuInvisible_mobile");
+            menuElement.classList.remove("menuVisible_mobile");
+            hamburgerElement.style.color = "white";
+        }
+    </script>
     <!-- <script>
         let scrolling = false;
         let opacity = 1;
