@@ -70,7 +70,7 @@
         }
         
         @media (max-width: 500px) {
-            .menu_mobile {
+            .menuMobileScreen {
                 height: 100vh;
                 width: 100vw;
                 background-color: rgba(0, 0, 0, 0.7);
@@ -82,10 +82,10 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 5% 45% 50%;
             }
-            .menuInvisible_mobile {
+            .menuMobileScreenMakeInvisible {
                 left: -100vw;
             }
-            .menuVisible_mobile {
+            .menuMobileScreenMakeVisible {
                 left: 0vw;
             }
             .landingpage_mobile {
@@ -133,10 +133,9 @@
             }
             .hamburgerMenu {
                 color: white;
-                /* position: sticky;
-                top: 20px;
-                left: 20px; */
-                margin-left: 30px;
+                position: fixed;
+                top: 30px;
+                left: 30px;
                 grid-column: 1/2;
                 grid-row: 1/2;
                 align-self: end;
@@ -144,6 +143,7 @@
             }
             .xMenu {
                 color: var(--orange);
+                margin-top: 30px;
                 margin-left: 30px;
                 grid-column: 1/2;
                 grid-row: 1/2;

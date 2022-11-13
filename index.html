@@ -21,13 +21,14 @@
 <body>
     <!-- ------------------------------------------------------------------ -->
 
-    <div id="menu_mobile" class="menu_mobile menuInvisible_mobile">
-        <div id="xMenu" class="xMenu" onclick="menuXClick()">
+    <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible">
+        <div id="xMenuID" class="xMenu" onclick="menuXClick()">
             <i class="fa-solid fa-x"></i>
         </div>
+        <!-- <div style="width: 100px; height: 100px; background: red" onclick="redClick()"></div> -->
     </div>
 
-    <div id="hamburgerMenu" class="" style="color: white; position: fixed; top: 30px; left: 30px" onclick="menuHamburgerClick()">
+    <div id="hamburgerMenuID" class="hamburgerMenu" onclick="menuHamburgerClick()">
         <i class="fa-solid fa-bars"></i>
     </div>
 
@@ -115,18 +116,18 @@
 
     <script>
         function menuHamburgerClick() {
-            menuElement = document.getElementById("menu_mobile");
-            hamburgerElement = document.getElementById("hamburgerMenu");
-            menuElement.classList.remove("menuInvisible_mobile");
-            menuElement.classList.add("menuVisible_mobile");
+            menuElement = document.getElementById("menuMobileScreenID");
+            hamburgerElement = document.getElementById("hamburgerMenuID");
+            menuElement.classList.add("menuMobileScreenMakeVisible");
+            menuElement.classList.remove("menuMobileScreenMakeInvisible");
             hamburgerElement.style.color = "transparent";
         }
 
         function menuXClick() {
-            menuElement = document.getElementById("menu_mobile");
-            hamburgerElement = document.getElementById("hamburgerMenu");
-            menuElement.classList.add("menuInvisible_mobile");
-            menuElement.classList.remove("menuVisible_mobile");
+            menuElement = document.getElementById("menuMobileScreenID");
+            hamburgerElement = document.getElementById("hamburgerMenuID");
+            menuElement.classList.add("menuMobileScreenMakeInvisible");
+            menuElement.classList.remove("menuMobileScreenMakeVisible");
             hamburgerElement.style.color = "white";
         }
     </script>
