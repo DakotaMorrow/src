@@ -21,11 +21,10 @@
 <body>
     <!-- ------------------------------------------------------------------ -->
 
-    <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible">
-        <div id="xMenuID" class="xMenu" onclick="menuXClick()">
-            <i class="fa-solid fa-x"></i>
-        </div>
-        <!-- <div style="width: 100px; height: 100px; background: red" onclick="redClick()"></div> -->
+    <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible"></div>
+
+    <div id="xMenuID" class="xMenu" onclick="menuXClick()">
+        <i class="fa-solid fa-x"></i>
     </div>
 
     <div id="hamburgerMenuID" class="hamburgerMenu" onclick="menuHamburgerClick()">
@@ -116,19 +115,35 @@
 
     <script>
         function menuHamburgerClick() {
+            var r = document.querySelector(":root");
+            var rs = getComputedStyle(r);
+            var orange = rs.getPropertyValue("--orange");
+
             menuElement = document.getElementById("menuMobileScreenID");
-            hamburgerElement = document.getElementById("hamburgerMenuID");
+            hamburgerMenuElement = document.getElementById("hamburgerMenuID");
+            xMenuElement = document.getElementById("xMenuID");
             menuElement.classList.add("menuMobileScreenMakeVisible");
             menuElement.classList.remove("menuMobileScreenMakeInvisible");
-            hamburgerElement.style.color = "transparent";
+            hamburgerMenuElement.style.color = "transparent";
+            xMenuElement.style.color = orange;
+            hamburgerMenuElement.style.zIndex = "99";
+            xMenuElement.style.zIndex = "100";
         }
 
         function menuXClick() {
+            var r = document.querySelector(":root");
+            var rs = getComputedStyle(r);
+            var orange = rs.getPropertyValue("--orange");
+
             menuElement = document.getElementById("menuMobileScreenID");
-            hamburgerElement = document.getElementById("hamburgerMenuID");
+            hamburgerMenuElement = document.getElementById("hamburgerMenuID");
+            xMenuElement = document.getElementById("xMenuID");
             menuElement.classList.add("menuMobileScreenMakeInvisible");
             menuElement.classList.remove("menuMobileScreenMakeVisible");
-            hamburgerElement.style.color = "white";
+            hamburgerMenuElement.style.color = "white";
+            xMenuElement.style.color = "transparent";
+            hamburgerMenuElement.style.zIndex = "100";
+            xMenuElement.style.zIndex = "99";
         }
     </script>
     <!-- <script>

@@ -140,15 +140,20 @@
                 grid-row: 1/2;
                 align-self: end;
                 font-size: 25px;
+                z-index: 100;
             }
             .xMenu {
                 color: var(--orange);
-                margin-top: 30px;
-                margin-left: 30px;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                z-index: 100;
                 grid-column: 1/2;
                 grid-row: 1/2;
                 align-self: end;
                 font-size: 25px;
+                z-index: 99;
+                color: transparent;
             }
             .navbar {
                 overflow: hidden;
