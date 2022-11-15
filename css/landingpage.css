@@ -98,7 +98,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                background-attachment: fixed;
             }
             .charcoalglass {
                 grid-template-columns: 1fr;
