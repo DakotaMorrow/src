@@ -114,6 +114,24 @@
     <div class="fourthpage"></div>
 
     <script>
+        //calc(var(--vh, 1vh) * 100);
+
+        window.onload = function() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+            console.log("Inner  " + window.innerHeight);
+            console.log("Client " + window.clientHeight);
+            console.log(vh);
+
+            window.addEventListener("resize", () => {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+                console.log("Inner  " + window.innerHeight);
+                console.log("Client " + window.clientHeight);
+                console.log(vh);
+            });
+        };
+
         function menuHamburgerClick() {
             var r = document.querySelector(":root");
             var rs = getComputedStyle(r);

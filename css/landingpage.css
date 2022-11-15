@@ -94,7 +94,7 @@
                 display: block;
                 background-image: url("/img/mobile_landing.png");
                 width: 100vw;
-                height: 100vh;
+                height: calc(var(--vh, 1vh) * 100);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
