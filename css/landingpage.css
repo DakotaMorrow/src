@@ -1,197 +1,205 @@
-        .landingpage_desktop {
-            width: 100vw;
+    .landingpage_desktop {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("/img/desktop_landing.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    
+    .menu_desktop {
+        display: flex;
+        position: absolute;
+        grid-column: 1/6;
+        grid-row: 1;
+        /* background-color: #505050; */
+        margin-top: 20px;
+        width: 100%;
+        color: white;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    
+    .menuitem_desktop {
+        font-size: 25px;
+        color: var(--orange);
+        transition: color 250ms;
+    }
+    
+    .menuitem_desktop:hover {
+        color: white;
+    }
+    
+    .infoitem {
+        font-family: var(--logofont);
+        font-size: 2vw;
+        font-weight: 400;
+        color: rgba(214, 129, 0, 0.7);
+        margin-bottom: 10px;
+    }
+    
+    .charcoalglass {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+        display: grid;
+    }
+    
+    .landingpagepanel {
+        grid-column: 3/6;
+        grid-row: 4/6;
+        display: grid;
+        justify-items: left;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .landingpage_mobile {
+        display: none;
+    }
+    
+    .transparent {
+        color: transparent;
+    }
+    
+    @media (max-width: 500px) {
+        .mobileOnly {
+            display: block;
+        }
+        .desktopOnly {
+            display: none;
+        }
+        .menuMobileScreen {
             height: 100vh;
-            background-image: url("/img/desktop_landing.jpg");
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            transition: left 250ms;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 5% 45% 50%;
+        }
+        .menuMobileScreenMakeInvisible {
+            left: -100vw;
+        }
+        .menuMobileScreenMakeVisible {
+            left: 0vw;
+        }
+        .landingpage_mobile {
+            display: block;
+            background-image: url("/img/mobile_landing.png");
+            width: 100vw;
+            height: calc(var(--vh, 1vh) * 100);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-            background-attachment: fixed;
         }
-        
-        .menu_desktop {
-            display: flex;
-            position: absolute;
-            grid-column: 1/6;
-            grid-row: 1;
-            /* background-color: #505050; */
-            margin-top: 20px;
-            width: 100%;
-            color: white;
-            justify-content: flex-end;
-            gap: 20px;
-        }
-        
-        .menuitem_desktop {
-            font-size: 25px;
-            color: var(--orange);
-            transition: color 250ms;
-        }
-        
-        .menuitem_desktop:hover {
-            color: white;
-        }
-        
-        .infoitem {
-            font-family: var(--logofont);
-            font-size: 2vw;
-            font-weight: 400;
-            color: rgba(214, 129, 0, 0.7);
-            margin-bottom: 10px;
-        }
-        
         .charcoalglass {
-            background-color: rgba(0, 0, 0, 0.7);
+            grid-template-columns: 1fr;
+            grid-template-rows: 5% 45% 50%;
+        }
+        .infographics {
+            display: none;
+        }
+        .landingpage_desktop {
+            display: none;
+        }
+        .logopanel_mobile {
             height: 100%;
             width: 100%;
+            justify-self: center;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .logo_mobile {
             display: grid;
+            align-items: center;
+            justify-items: center;
+            padding-top: 50px;
         }
-        
-        .landingpagepanel {
-            grid-column: 3/6;
-            grid-row: 4/6;
-            display: grid;
-            justify-items: left;
+        .info_mobile {
+            grid-column: 1/2;
+            grid-row: 3/4;
         }
-        
-        .hidden {
-            display: none;
+        .infoitem_mobile {
+            font-family: var(--logofont);
+            color: var(--orange);
+            font-size: 6vw;
+            text-align: center;
         }
-        
-        .landingpage_mobile {
-            display: none;
+        .infoitem_mobile a:link {
+            text-decoration: none;
         }
-        
-        .transparent {
+        .hamburgerMenu {
+            color: white;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            align-self: end;
+            font-size: 25px;
+            z-index: 100;
+        }
+        .xMenu {
+            color: var(--orange);
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            align-self: end;
+            font-size: 25px;
+            z-index: 99;
             color: transparent;
         }
-        
-        @media (max-width: 500px) {
-            .mobileOnly {
-                display: block;
-            }
-            .desktopOnly {
-                display: none;
-            }
-            .menuMobileScreen {
-                height: 100vh;
-                width: 100vw;
-                background-color: rgba(0, 0, 0, 0.7);
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                transition: left 250ms;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 5% 45% 50%;
-            }
-            .menuMobileScreenMakeInvisible {
-                left: -100vw;
-            }
-            .menuMobileScreenMakeVisible {
-                left: 0vw;
-            }
-            .landingpage_mobile {
-                display: block;
-                background-image: url("/img/mobile_landing.png");
-                width: 100vw;
-                height: calc(var(--vh, 1vh) * 100);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-            .charcoalglass {
-                grid-template-columns: 1fr;
-                grid-template-rows: 5% 45% 50%;
-            }
-            .infographics {
-                display: none;
-            }
-            .landingpage_desktop {
-                display: none;
-            }
-            .logopanel_mobile {
-                height: 100%;
-                width: 100%;
-                justify-self: center;
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
-            .logo_mobile {
-                display: grid;
-                align-items: center;
-                justify-items: center;
-                padding-top: 50px;
-            }
-            .info_mobile {
-                grid-column: 1/2;
-                grid-row: 3/4;
-            }
-            .infoitem_mobile {
-                font-family: var(--logofont);
-                color: var(--orange);
-                font-size: 6vw;
-                text-align: center;
-            }
-            .hamburgerMenu {
-                color: white;
-                position: fixed;
-                top: 30px;
-                left: 30px;
-                grid-column: 1/2;
-                grid-row: 1/2;
-                align-self: end;
-                font-size: 25px;
-                z-index: 100;
-            }
-            .xMenu {
-                color: var(--orange);
-                position: fixed;
-                top: 30px;
-                left: 30px;
-                z-index: 100;
-                grid-column: 1/2;
-                grid-row: 1/2;
-                align-self: end;
-                font-size: 25px;
-                z-index: 99;
-                color: transparent;
-            }
-            .navbar {
-                overflow: hidden;
-                background-color: #333;
-                position: fixed;
-                top: 0;
-                width: 100%;
-            }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
         }
-        
-        @media (min-width: 501px) {
-            .mobileOnly {
-                display: none;
-            }
-            .desktopOnly {
-                display: block;
-            }
-            .charcoalglass {
-                grid-template-columns: repeat(5, 20%);
-                grid-template-rows: repeat(5, 20%);
-            }
-            .logopanel_desktop {
-                grid-column: 1 / 2;
-                grid-row: 1/3;
-                display: grid;
-                align-items: end;
-                justify-items: start;
-            }
-            .newtitleimage {
-                grid-column: 3 / 6;
-                grid-row: 2/3;
-                align-self: end;
-            }
+        .autolink-safari a {
+            pointer-events: none !important;
+            text-decoration: none !important;
+            color: inherit !important;
         }
-        
-        .logo_desktop {
-            width: clamp(50px, 70%, 150px);
-            margin-left: 40px;
-            object-fit: cover;
+    }
+    
+    @media (min-width: 501px) {
+        .mobileOnly {
+            display: none;
         }
+        .desktopOnly {
+            display: block;
+        }
+        .charcoalglass {
+            grid-template-columns: repeat(5, 20%);
+            grid-template-rows: repeat(5, 20%);
+        }
+        .logopanel_desktop {
+            grid-column: 1 / 2;
+            grid-row: 1/3;
+            display: grid;
+            align-items: end;
+            justify-items: start;
+        }
+        .newtitleimage {
+            grid-column: 3 / 6;
+            grid-row: 2/3;
+            align-self: end;
+        }
+    }
+    
+    .logo_desktop {
+        width: clamp(50px, 70%, 150px);
+        margin-left: 40px;
+        object-fit: cover;
+    }
