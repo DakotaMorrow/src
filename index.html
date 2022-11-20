@@ -23,10 +23,18 @@
 
     <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible">
         <div>
-            <div class="menuItemMobile">Home</div>
-            <div class="menuItemMobile">Events</div>
-            <div class="menuItemMobile">Beer</div>
-            <div class="menuItemMobile">About</div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+                <a href="#landingPageMobile">Home</a>
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+                <a href="#beerInfo">About</a>
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+                <a href="#beerInfo">Events</a>
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+                <a href="#beerInfo">Beer</a>
+            </div>
         </div>
     </div>
 
@@ -38,7 +46,7 @@
         <i class="fa-solid fa-bars"></i>
     </div>
 
-    <div class="landingPageMobile">
+    <div id="landingPageMobile" class="landingPageMobile">
         <div class="charcoalglass">
             <div class="logoPanelMobile">
                 <div class="logoMobile">
@@ -146,23 +154,19 @@
             });
         };
 
-        function menuHamburgerClick() {
-            var r = document.querySelector(":root");
-            var rs = getComputedStyle(r);
-            var orange = rs.getPropertyValue("--orange");
+        function clickMobileMenuItem() {
+            hideMobileMenu();
+        }
 
-            menuElement = document.getElementById("menuMobileScreenID");
-            hamburgerMenuElement = document.getElementById("hamburgerMenuID");
-            xMenuElement = document.getElementById("xMenuID");
-            menuElement.classList.add("menuMobileScreenMakeVisible");
-            menuElement.classList.remove("menuMobileScreenMakeInvisible");
-            hamburgerMenuElement.style.color = "transparent";
-            xMenuElement.style.color = orange;
-            hamburgerMenuElement.style.zIndex = "99";
-            xMenuElement.style.zIndex = "100";
+        function menuHamburgerClick() {
+            showMobileMenu();
         }
 
         function menuXClick() {
+            hideMobileMenu();
+        }
+
+        function hideMobileMenu() {
             var r = document.querySelector(":root");
             var rs = getComputedStyle(r);
             var orange = rs.getPropertyValue("--orange");
@@ -176,6 +180,22 @@
             xMenuElement.style.color = "transparent";
             hamburgerMenuElement.style.zIndex = "100";
             xMenuElement.style.zIndex = "99";
+        }
+
+        function showMobileMenu() {
+            var r = document.querySelector(":root");
+            var rs = getComputedStyle(r);
+            var orange = rs.getPropertyValue("--orange");
+
+            menuElement = document.getElementById("menuMobileScreenID");
+            hamburgerMenuElement = document.getElementById("hamburgerMenuID");
+            xMenuElement = document.getElementById("xMenuID");
+            menuElement.classList.add("menuMobileScreenMakeVisible");
+            menuElement.classList.remove("menuMobileScreenMakeInvisible");
+            hamburgerMenuElement.style.color = "transparent";
+            xMenuElement.style.color = orange;
+            hamburgerMenuElement.style.zIndex = "99";
+            xMenuElement.style.zIndex = "100";
         }
     </script>
     <!-- <script>
