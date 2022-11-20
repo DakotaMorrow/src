@@ -13,8 +13,6 @@
         position: absolute;
         grid-column: 1/6;
         grid-row: 1;
-        /* background-color: #505050; */
-        margin-top: 20px;
         width: 100%;
         color: white;
         justify-content: flex-end;
@@ -35,6 +33,26 @@
         display: none;
     }
     
+    a:link {
+        text-decoration: none;
+        color: var(--orange);
+    }
+    
+    a:visited {
+        text-decoration: none;
+        color: var(--orange);
+    }
+    
+    a:active {
+        text-decoration: none;
+        color: var(--orange);
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
     .infoitem {
         font-family: var(--logofont);
         font-size: 2vw;
@@ -48,6 +66,20 @@
         height: 100%;
         width: 100%;
         display: grid;
+    }
+    
+    .menuBackgroundDesktop {
+        background-color: black;
+        height: 60px;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: grid;
+        align-items: center;
+        box-shadow: 1px 5px 4px -1px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 1px 5px 4px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 5px 4px -1px rgba(0, 0, 0, 0.75);
     }
     
     .landingpagepanel {
