@@ -108,6 +108,9 @@
         .desktopOnly {
             display: none;
         }
+        .desktopOnlyGrid {
+            display: none;
+        }
         .menuMobileScreen {
             height: 100vh;
             width: 100vw;
@@ -223,6 +226,9 @@
         }
         .desktopOnly {
             display: block;
+        }
+        .desktopOnlyGrid {
+            display: grid;
         }
         .charcoalglass {
             grid-template-columns: repeat(5, 20%);
