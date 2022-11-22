@@ -27,13 +27,14 @@
                 <a href="#landingPageMobile">Home</a>
             </div>
             <div class="menuItemMobile" onclick="clickMobileMenuItem()">
-                <a href="#beerInfo">About</a>
+                <a href="#happenings">Events</a>
             </div>
-            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
-                <a href="#beerInfo">Events</a>
-            </div>
+
             <div class="menuItemMobile" onclick="clickMobileMenuItem()">
                 <a href="#beerInfo">Beer</a>
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+                <a href="#beerInfo">About</a>
             </div>
         </div>
     </div>
@@ -66,17 +67,26 @@
 
     <div class="menuBackgroundDesktop desktopOnlyGrid">
         <div class="menuDesktop">
-            <div class="menuItemDesktop"><a href="">About</a></div>
-            <div class="menuItemDesktop"><a href="#homedesktop">Home</a></div>
-            <div class="menuItemDesktop"><a href="#happenings">Events</a></div>
-            <div class="menuItemDesktop"><a href="#beerInfo">Beer</a></div>
+            <div class="menuItemDesktop">
+                <a href="">About</a>
+            </div>
+            <div class="menuItemDesktop">
+                <a href="#landingPageDesktop">Home</a>
+            </div>
+            <div class="menuItemDesktop" onclick="clickHappenings()">
+                Events
+                <!-- <a href="#happenings">Events</a> -->
+            </div>
+            <div class="menuItemDesktop">
+                <a href="#beerInfo">Beer</a>
+            </div>
             <div style="width: 50px"></div>
         </div>
     </div>
 
     <!-- -------------------------------------------------------------------- -->
 
-    <div id="homedesktop" class="landingPageDesktop">
+    <div id="landingPageDesktop" class="landingPageDesktop">
         <div class="charcoalglass">
             <div class="logopanel_desktop">
                 <img src="img/BrewPubLogoOutlinesOrange.png" class="logo_desktop" />
@@ -153,6 +163,11 @@
                 console.log(vh);
             });
         };
+
+        function clickHappenings() {
+            document.getElementById("happenings").scrollIntoView();
+            window.scrollBy(0, -60);
+        }
 
         function clickMobileMenuItem() {
             hideMobileMenu();
