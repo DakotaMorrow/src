@@ -22,7 +22,15 @@
     <!-- ------------------------------------------------------------------ -->
 
     <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible">
-        <div>
+        <div style="
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          padding-top: 50px;
+        ">
+            <img src="img/BrewPubLogoOutlinesOrange.png" width="30%" alt="logo" />
+        </div>
+        <div style="align-self: start">
             <div class="menuItemMobile" onclick="clickMobileMenuItem()">
                 <a href="#landingPageMobile">Home</a>
             </div>
@@ -68,9 +76,6 @@
     <div class="menuBackgroundDesktop desktopOnlyGrid">
         <div class="menuDesktop">
             <div class="menuItemDesktop">
-                <a href="">About</a>
-            </div>
-            <div class="menuItemDesktop">
                 <a href="#landingPageDesktop">Home</a>
             </div>
             <div class="menuItemDesktop" onclick="clickHappenings()">
@@ -79,6 +84,10 @@
             </div>
             <div class="menuItemDesktop">
                 <a href="#beerInfo">Beer</a>
+            </div>
+
+            <div class="menuItemDesktop">
+                <a href="">About</a>
             </div>
             <div style="width: 50px"></div>
         </div>

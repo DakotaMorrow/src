@@ -121,7 +121,7 @@
             transition: left 250ms;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 100%;
+            grid-template-rows: 50% 50%;
             align-items: center;
             justify-items: center;
         }
