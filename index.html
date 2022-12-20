@@ -78,12 +78,11 @@
             <div class="menuItemDesktop">
                 <a href="#landingPageDesktop">Home</a>
             </div>
-            <div class="menuItemDesktop" onclick="clickHappenings()">
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('happenings')">
                 Events
-                <!-- <a href="#happenings">Events</a> -->
             </div>
-            <div class="menuItemDesktop">
-                <a href="#beerInfo">Beer</a>
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('beerInfo')">
+                Beer
             </div>
 
             <div class="menuItemDesktop">
@@ -151,8 +150,40 @@
 
     <!-- ------------------------------------------------------------------ -->
 
-    <div></div>
-    <div id="beerInfo" class="fourthpage"></div>
+    <div id="beerInfo" class="beerInfo">
+        <div style="
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          font-size: 60px;
+          font-family: var(--logofont);
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          height: 200px;
+        ">
+            <div>BEER</div>
+        </div>
+
+        <div class="beerImages">
+            <div class="beerGlass">
+                <img class="beerGlassImage" src="img/light_beer.png" />
+                <div>Light Beer</div>
+            </div>
+            <div class="beerGlass">
+                <img class="beerGlassImage" src="img/wheat_beer.png" />
+                <div>Wheat Beer</div>
+            </div>
+            <div class="beerGlass">
+                <img class="beerGlassImage" src="img/IPA _beer.png" />
+                <div>IPA Beer</div>
+            </div>
+            <div class="beerGlass">
+                <img class="beerGlassImage" src="img/dark_beer.png" />
+                <div>Dark Beer</div>
+            </div>
+        </div>
+    </div>
 
     <script>
         //calc(var(--vh, 1vh) * 100);
@@ -173,8 +204,8 @@
             });
         };
 
-        function clickHappenings() {
-            document.getElementById("happenings").scrollIntoView();
+        function clickDesktopMenu(id) {
+            document.getElementById(id).scrollIntoView();
             window.scrollBy(0, -60);
         }
 
