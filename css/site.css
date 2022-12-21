@@ -1,128 +1,170 @@
-                      :root {
-                         --orange: #d68100;
-                         --darkgray: #181818;
-                         --logofont: "Lato";
-                         --gray: #7a7a7a;
-                     }
-                     
-                     body {
-                         font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
-                         margin: 0;
-                         padding: 0;
-                         overflow-x: hidden;
-                     }
-                     
-                     .infographics {
-                         display: grid;
-                         grid-template-columns: 100%;
-                         justify-items: center;
-                         width: 100%;
-                         background-color: var(--darkgray);
-                         color: white;
-                         border-color: var(--orange);
-                         border-style: solid;
-                         border-width: 3px 0 0 0;
-                     }
-                     
-                     .happenings {
-                         width: 100%;
-                         background-color: var(--orange);
-                         padding-bottom: 50px;
-                     }
-                     
-                     .events {
-                         margin-top: 40px;
-                         display: flex;
-                         justify-content: center;
-                         width: 100%;
-                         flex-wrap: wrap;
-                         gap: 20px;
-                     }
-                     
-                     .event {
-                         display: grid;
-                         grid-template-columns: 1fr;
-                         grid-template-rows: 50px 100px;
-                         width: 300px;
-                         border-style: solid;
-                         border-width: 2px;
-                         border-color: var(--darkgray);
-                         border-radius: 5px;
-                     }
-                     
-                     .calendardate {
-                         font-size: 30px;
-                         font-weight: 500;
-                         background-color: var(--darkgray);
-                         color: white;
-                         display: grid;
-                         grid-template-columns: 1fr;
-                         align-items: center;
-                         justify-items: center;
-                         text-transform: uppercase;
-                     }
-                     
-                     .aboutevent {
-                         padding: 10px;
-                         color: white;
-                         font-size: 20px;
-                     }
-                     
-                     .eventtitle {
-                         font-family: var(--logofont);
-                         font-size: 60px;
-                         text-align: center;
-                         color: var(--darkgray);
-                         padding-top: 35px;
-                     }
-                     /* ---------------------------------------------------------------- */
-                     /* --BEER  */
-                     
-                     .beerSection {
-                         background-color: whitesmoke;
-                         width: 100vw;
-                     }
-                     
-                     .beerSectionImages {
-                         width: 100vw;
-                         display: grid;
-                         justify-items: center;
-                     }
-                     
-                     .beerImages {
-                         display: flex;
-                         gap: 200px;
-                         flex-wrap: wrap;
-                         justify-content: center;
-                         width: 70%;
-                     }
-                     
-                     .beerGlassImage {
-                         height: 300px;
-                     }
-                     
-                     .beerGlass {
-                         display: grid;
-                         grid-template-rows: 300px 40px;
-                         justify-items: center;
-                         font-size: 25px;
-                         font-family: var(--logofont);
-                         align-self: center;
-                         ;
-                     }
-                     /* ---------------------------------------------------------------- */
-                     /* --FOOD  */
-                     
-                     .foodSection {
-                         width: 100vw;
-                         background-color: rgb(245, 245, 245);
-                         font-family: var(--logofont);
-                         display: grid;
-                         grid-template-columns: 1fr;
-                         justify-items: center;
-                         align-items: center;
-                     }
-                     
-                     .foodSectionImages {
-                         width: 30%;
-                     }
+:root {
+    --orange: #d68100;
+    --darkgray: #181818;
+    --logofont: "Lato";
+    --gray: #7a7a7a;
+}
+
+body {
+    font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.infographics {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    width: 100%;
+    background-color: var(--darkgray);
+    color: white;
+    border-color: var(--orange);
+    border-style: solid;
+    border-width: 3px 0 0 0;
+}
+
+.happenings {
+    width: 100%;
+    background-color: var(--orange);
+    padding-bottom: 50px;
+}
+
+.events {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100px;
+    width: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--darkgray);
+    border-radius: 5px;
+}
+
+.calendardate {
+    font-size: 30px;
+    font-weight: 500;
+    background-color: var(--darkgray);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    text-transform: uppercase;
+}
+
+.aboutevent {
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.eventtitle {
+    font-family: var(--logofont);
+    font-size: 60px;
+    text-align: center;
+    color: var(--darkgray);
+    padding-top: 35px;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+
+/* --BEER  */
+
+.beerSection {
+    background-color: whitesmoke;
+    width: 100vw;
+}
+
+.beerSectionImages {
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+}
+
+.beerImages {
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+
+.beerGlassImage {
+    height: 300px;
+}
+
+.beerGlass {
+    display: grid;
+    grid-template-rows: 300px 40px;
+    justify-items: center;
+    font-size: 25px;
+    font-family: var(--logofont);
+    color: var(--darkgray);
+    align-self: center;
+    ;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+
+/* --FOOD  */
+
+.foodSection {
+    width: 100vw;
+    background-color: rgb(245, 245, 245);
+    font-family: var(--logofont);
+    color: var(--darkgray);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.foodSectionItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+}
+
+.foodSectionImage {
+    width: 100%;
+}
+
+.foodSectionDescription {
+    align-self: center;
+    padding-left: 30px;
+}
+
+.foodSectionDescriptionRight {
+    padding: 0 0 0 30px;
+}
+
+.foodSectionDescriptionLeft {
+    padding: 0 30px 0 0
+}
+
+@media (max-width: 500px) {
+    .foodSectionItem {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+    .foodSectionDescriptionRight {
+        padding: 15px 0 20px 0;
+    }
+    .foodSectionDescriptionLeft {
+        padding: 15px 0 20px 0;
+    }
+}

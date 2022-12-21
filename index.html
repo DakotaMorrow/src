@@ -31,17 +31,21 @@
             <img src="img/BrewPubLogoOutlinesOrange.png" width="30%" alt="logo" />
         </div>
         <div style="align-self: start">
-            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
-                <a href="#landingPageMobile">Home</a>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('landingPageMobile')">
+                Home
             </div>
-            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
-                <a href="#happenings">Events</a>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('happenings')">
+                Events
             </div>
 
-            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
-                <a href="#beerSection">Beer</a>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('beerSection')">
+                Beer
             </div>
-            <div class="menuItemMobile" onclick="clickMobileMenuItem()">
+
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('foodSection')">
+                Grill
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('')">
                 <a href="#beerInfo">About</a>
             </div>
         </div>
@@ -83,6 +87,9 @@
             </div>
             <div class="menuItemDesktop" onclick="clickDesktopMenu('beerSection')">
                 Beer
+            </div>
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('foodSection')">
+                Grill
             </div>
 
             <div class="menuItemDesktop">
@@ -162,6 +169,7 @@
           align-items: center;
           justify-items: center;
           height: 200px;
+          color: var(--darkgray);
         ">
             <div>BEER</div>
         </div>
@@ -190,7 +198,7 @@
 
     <!-- ------------------------------------------------------------------ -->
 
-    <div class="foodSection">
+    <div id="foodSection" class="foodSection">
         <div style="
           width: 100%;
           margin-right: auto;
@@ -204,7 +212,41 @@
         ">
             <div>GRILL</div>
         </div>
-        <img class="foodSectionImages" src="img/hamburger.jpg" />
+
+        <div class="foodSectionItem">
+            <div><img class="foodSectionImage" src="img/hamburger.jpg" /></div>
+            <div class="foodSectionDescription foodSectionDescriptionRight">
+                Hambugers made with quarterpound or half-pound patties. Choose toppings from grilled onions, avacado, grilled pineapple, bacon, cheese, onion rings and more.
+            </div>
+        </div>
+        <div class="foodSectionItem">
+            <div class="mobileOnly">
+                <img class="foodSectionImage" src="img/hamburger.jpg" />
+            </div>
+            <div class="foodSectionDescription foodSectionDescriptionLeft">
+                Hambugers made with quarterpound or half-pound patties. Choose toppings from grilled onions, avacado, grilled pineapple, bacon, cheese, onion rings and more.
+            </div>
+            <div class="desktopOnly">
+                <img class="foodSectionImage" src="img/hamburger.jpg" />
+            </div>
+        </div>
+        <div class="foodSectionItem">
+            <div><img class="foodSectionImage" src="img/hamburger.jpg" /></div>
+            <div class="foodSectionDescription foodSectionDescriptionRight">
+                Hambugers made with quarterpound or half-pound patties. Choose toppings from grilled onions, avacado, grilled pineapple, bacon, cheese, onion rings and more.
+            </div>
+        </div>
+        <div class="foodSectionItem">
+            <div class="mobileOnly">
+                <img class="foodSectionImage" src="img/hamburger.jpg" />
+            </div>
+            <div class="foodSectionDescription foodSectionDescriptionLeft">
+                Hambugers made with quarterpound or half-pound patties. Choose toppings from grilled onions, avacado, grilled pineapple, bacon, cheese, onion rings and more.
+            </div>
+            <div class="desktopOnly">
+                <img class="foodSectionImage" src="img/hamburger.jpg" />
+            </div>
+        </div>
     </div>
 
     <script>
@@ -231,7 +273,9 @@
             window.scrollBy(0, -60);
         }
 
-        function clickMobileMenuItem() {
+        function clickMobileMenuItem(id) {
+            document.getElementById(id).scrollIntoView();
+
             hideMobileMenu();
         }
 
