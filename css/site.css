@@ -2,7 +2,8 @@
     --orange: #d68100;
     --darkgray: #181818;
     --logofont: "Lato";
-    --gray: #7a7a7a;
+    --gray: #909090;
+    --lightgray: #e0e0e0;
 }
 
 body {
@@ -83,7 +84,7 @@ body {
 /* --BEER  */
 
 .beerSection {
-    background-color: whitesmoke;
+    background-color: var(--lightgray);
     width: 100vw;
 }
 
@@ -95,7 +96,8 @@ body {
 
 .beerImages {
     display: flex;
-    gap: 200px;
+    column-gap: 200px;
+    row-gap: 100px;
     flex-wrap: wrap;
     justify-content: center;
     width: 70%;
@@ -124,7 +126,7 @@ body {
 
 .foodSection {
     width: 100vw;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--lightgray);
     font-family: var(--logofont);
     color: var(--darkgray);
     display: grid;
@@ -162,9 +164,9 @@ body {
         width: 95%;
     }
     .foodSectionDescriptionRight {
-        padding: 15px 0 20px 0;
+        padding: 10px 15px 20px 15px;
     }
     .foodSectionDescriptionLeft {
-        padding: 15px 0 20px 0;
+        padding: 10px 15px 20px 15px;
     }
 }
