@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Raleway, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("img/background_desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+
+      .containerIndex {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+      }
+
+      .charcoalglass {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 2000px;
+      }
+
+      .coffeepour {
+        background-image: url("img/Coffee_Pour.jpg");
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .leftcolumn {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(255, 255, 255, 0.2); */
+      }
+
+      .coffeeimages {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .rightcolumn {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        width: 100%;
+        height: 100%;
+      }
+
+      .coffeeitems {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+      }
+
+      .coffeeimagedesktop {
+        transition: transform;
+      }
+
+      .coffeeimagedesktop:hover {
+        transform: scale(1.1);
+      }
+
+      .coffeeimagemobile {
+        transition: transform;
+      }
+
+      .coffeeimagemobile:hover {
+      }
+      /* Mobile */
+
+      @media (max-width: 500px) {
+        .layout {
+          color: #ffffff;
+          display: grid;
+          width: 100vw;
+          grid-template-columns: 100%;
+          grid-template-rows: 100%;
+          /* align-items: center; */
+          justify-items: center;
+          font-size: 40px;
+          font-weight: 700;
+        }
+        .logo {
+          font-family: "Domine";
+          color: #c6864b;
+          font-size: 13vw;
+          margin-bottom: 40px;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobilelayout {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 80%;
+          margin-top: 40px;
+        }
+        .coffeeimagemobile {
+          width: 90%;
+        }
+        .address {
+          font-family: "Domine";
+          color: #d0d0d0;
+          font-size: 30px;
+          margin-top: 8px;
+        }
+      }
+      /* Desktop */
+
+      @media (min-width: 501px) {
+        .layout {
+          color: #ffffff;
+          display: grid;
+          width: 100vw;
+          height: 100vh;
+          grid-template-columns: 30% 40% 30%;
+          grid-template-rows: 30% 40% 30%;
+          align-items: center;
+          justify-items: center;
+          font-size: 40px;
+          font-weight: 700;
+        }
+        .coffeeimagedesktop {
+          width: 100%;
+        }
+        .logo {
+          font-family: "Domine";
+          color: #c6864b;
+          font-size: 5vw;
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+        .address {
+          font-size: 2.1vw;
+          color: #e0e0e0;
+          text-align: center;
+          margin-top: 6px;
+        }
+        .mobile {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="containerIndex">
+      <div class="charcoalglass layout desktop">
+        <div class="leftcolumn">
+          <div class="coffeeimages">
+            <img src="img/coffeecup.png" /><img
+              src="img/CoffeeBeanFinal_1.png"
+            /><img src="img/coffee_bean_final2.png" />
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="coffeeitems">
+            <img class="coffeeimagedesktop" src="img/menu_americano.png" />
+            <img class="coffeeimagedesktop" src="img/menu_cappuccino.png" />
+            <img class="coffeeimagedesktop" src="img/menu_caramel.png" />
+            <img class="coffeeimagedesktop" src="img/menu_mocha.png" />
+            <img class="coffeeimagedesktop" src="img/menu_frappe.png" />
+            <img class="coffeeimagedesktop" src="img/menu_latte.png" />
+          </div>
+        </div>
+        <div class="logo">
+          <div>Central Café</div>
+          <div style="margin-top: 20px" class="address">123 Beach Avenue</div>
+          <div class="address">321.456.6789</div>
+        </div>
+      </div>
+
+      <div class="charcoalglass layout mobile">
+        <div class="mobilelayout">
+          <div class="logo">Central Café</div>
+          <img class="coffeeimagemobile" src="img/menu_americano.png" />
+          <img class="coffeeimagemobile" src="img/menu_cappuccino.png" />
+          <img class="coffeeimagemobile" src="img/menu_caramel.png" />
+          <img class="coffeeimagemobile" src="img/menu_mocha.png" />
+          <img class="coffeeimagemobile" src="img/menu_frappe.png" />
+          <img class="coffeeimagemobile" src="img/menu_latte.png" />
+          <img
+            class="coffeeimagemobile"
+            style="margin-top: 25px"
+            src="img/CoffeeBeanFinal_1.png"
+          />
+          <img
+            class="coffeeimagemobile"
+            style="margin-top: 25px"
+            src="img/coffee_bean_final2.png"
+          />
+          <div class="address" style="margin-top: 40px">123 Beach Avenue</div>
+          <div class="address">321.456.6789</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
